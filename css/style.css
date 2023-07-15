@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Zen Maru Gothic", sans-serif;
+  background-color: #FFF7F7;
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+header .logo {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+nav .menu-list {
+  display: flex;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+nav .menu-list li {
+  margin-left: 2rem;
+}
+
+/* intro sec */
+.intro-sec {
+  display: flex;
+  padding: 6rem 0;
+}
+
+.intro-sec .sec-title {
+    font-size: 3.5rem;
+    text-align: left;
+}
+
+.intro-sec .intro-txt {
+  display: flex;
+  width: 60%;
+}
+
+.intro-sec .social-link li {
+  margin-top: 1.5rem;
+}
+
+.intro-sec .icn {
+  font-size: 1.5rem;
+}
+
+.intro-sec .about-me {
+  margin-left: 40px;
+}
+
+/* intro image animation */
+.card-container {
+  display: inline-block;
+  margin: 25px 70px;
+  padding: 0 12px;
+  perspective: 900px;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  background: #e9b1bfa3;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
+    0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+
+.front,
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 50%;
+}
+
+.back img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.front span {
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+  color: #003d5b;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* about sec */
+.about-sec {
+    background-color: #FEFAFA;
+    padding: 6rem 0;
+}

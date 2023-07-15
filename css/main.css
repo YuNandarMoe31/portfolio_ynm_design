@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.sec-title {
+  font-size: 2.2rem;
+  color: #003d5b;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.sec-txt {
+  font-size: 17px;
+  color: #35373a;
+  margin-top: 15px;
+  line-height: 1.5;
+}
