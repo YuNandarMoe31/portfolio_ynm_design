@@ -1,6 +1,64 @@
 @charset "UTF-8";
 
-.sec-title {
+body {
+  font-family: "Zen Maru Gothic", sans-serif;
+  background-color: #fff7f7;
+}
+
+.inner {
+  max-width: 1140px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
+
+.pc {
+  display: block;
+}
+
+.sp {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+header .logo {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+header .logo img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #bdc1c7;
+  border-radius: 50%;
+}
+
+nav .menu-list {
+  display: flex;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+nav .menu-list li {
+  margin-left: 2rem;
+}
+
+.sec-title,
+.sec-title02 {
   display: flex;
   /* justify-content: center; */
   position: relative;
@@ -21,4 +79,18 @@
   color: #6c81a5;
   line-height: 1.5;
   text-decoration: underline wavy;
+}
+
+@media (max-width: 960px) {
+  .pc {
+    display: none;
+  }
+  
+  .sp {
+    display: block;
+  }
+
+  .sec-txt {
+    font-size: 15px;
+  }
 }

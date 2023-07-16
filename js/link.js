@@ -7,3 +7,8 @@ $(function() {
 $(function() {
     $("#about").load("about.html");
 });
+
+// education
+$(function() {
+    $("#education").load("education.html");
+});

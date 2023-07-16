@@ -1,50 +1,24 @@
 @charset "UTF-8";
 
-body {
-  font-family: "Zen Maru Gothic", sans-serif;
-  background-color: #fff7f7;
-}
-
-.inner {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 3.5rem 0;
-}
-
-header .logo {
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-nav .menu-list {
-  display: flex;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-nav .menu-list li {
-  margin-left: 2rem;
-}
-
 /* intro sec */
 .intro-sec {
-  display: flex;
+  /* display: flex; */
   padding: 6rem 0;
 }
 
 .intro-sec .sec-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-align: left;
 }
 
 .intro-sec .intro-txt {
   display: flex;
+  float: left;
   width: 60%;
+}
+
+.intro-sec .intro-img {
+  float: right;
 }
 
 .intro-sec .social-link li {
@@ -53,6 +27,7 @@ nav .menu-list li {
 
 .intro-sec .icn {
   font-size: 1.5rem;
+  color: #9f354ea3;
 }
 
 .intro-sec .about-me {
@@ -83,7 +58,7 @@ nav .menu-list li {
 .front,
 .back {
   position: absolute;
-  background: #e9b1bfa3;
+  background: #dbbec5a3;
   top: 0;
   left: 0;
   width: 200px;
@@ -110,10 +85,14 @@ nav .menu-list li {
   border-radius: 50%;
 }
 
-.front span {
-  font-family: "Playfair Display", serif;
-  font-size: 23px;
-  color: #003d5b;
+.front span img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translateY(-50%);
 }
 
 .card-container:hover .card {
@@ -122,6 +101,55 @@ nav .menu-list li {
 
 .back {
   transform: rotateY(180deg);
+}
+
+@media (max-width: 960px) {
+  /* intro sec */
+  .intro-sec {
+    display: block;
+    padding: 2rem 0;
+  }
+
+  .intro-sec .intro-txt,
+  .intro-sec .intro-img {
+    display: flex;
+    float: none;
+    justify-content: center;
+  }
+
+  .intro-sec .intro-txt {
+    width: 90%;
+  }
+
+  .front,
+  .back,
+  .back img,
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .front span img {
+    width: 100px;
+    height: 100px;
+    left: 18%;
+  }
+
+  .front span {
+    font-size: 17px;
+  }
+
+  .intro-sec .sec-title {
+    font-size: 2rem;
+  }
+
+  .intro-sec .icn {
+    font-size: 16px;
+  }
+
+  .intro-sec .social-link li {
+    margin-top: 13px;
+  }
 }
 
 /* about sec */
@@ -140,7 +168,7 @@ nav .menu-list li {
 }
 
 .about-sec .about-img {
-  width: 30%;
+  width: 280px;
   margin-top: 32px;
 }
 
@@ -148,34 +176,35 @@ nav .menu-list li {
   width: 100%;
 }
 
-.about-sec .about-txt {
+.about-txt {
   width: 60%;
   margin-left: 10%;
   margin-top: 2rem;
 }
 
-.about-sec .about-txt li,
-.about-sec .about-txt li a {
+.about-txt li,
+.about-txt li a {
   font-family: "Playfair, serif";
   color: #5c6066;
 }
 
-.about-sec .about-txt li {
+.about-txt li {
   display: flex;
   margin-bottom: 15px;
   line-height: 1.5;
 }
 
-.about-sec .about-txt .title {
+.about-txt .title {
   width: 15%;
+  font-weight: bold;
 }
 
-.about-sec .education {
+.education {
   padding-top: 3%;
   border-top: 1px dotted #5c6066;
 }
 
-.about-sec .sec-title::after {
+.sec-title02::after {
   border-bottom: 1.5px solid;
   position: absolute;
   content: "";
@@ -189,7 +218,7 @@ nav .menu-list li {
 }
 
 .profile-card {
-  background-color: #3e3131;
+  background-color: #333;
   margin-bottom: 20px;
   border-radius: 10px;
 }
@@ -229,14 +258,14 @@ nav .menu-list li {
 .profile-info .position {
   display: block;
   font-size: 10px;
-  color: #4cb493;
+  color: #b44c6f;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
 }
 
 .profile-info a {
-  color: #4cb493;
+  color: #b44c6f;
 }
 
 .profile-card:hover .profile-pic {
@@ -301,6 +330,30 @@ nav .menu-list li {
 }
 
 .about-sec .social-link li a:hover {
-  color: #226852;
+  color: #cf7996;
 }
 
+@media (max-width: 960px) {
+  .about-sec {
+    padding: 2rem 0;
+  }
+
+  .about-sec .about-inner {
+    justify-content: center;
+  }
+
+  .about-img {
+    padding: 0;
+  }
+
+  .about-txt {
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .education {
+    padding-top: 3%;
+    border-top: 0px;
+  }
+}
