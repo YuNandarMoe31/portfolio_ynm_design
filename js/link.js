@@ -12,3 +12,8 @@ $(function() {
 $(function() {
     $("#education").load("education.html");
 });
+
+// services
+$(function() {
+    $("#services").load("services.html");
+});
