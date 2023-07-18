@@ -49,6 +49,8 @@ header .logo {
   font-size: 18px;
   text-transform: uppercase;
   background-color: #FFF7F7;
+  border: 1px solid #bdc1c7;
+  border-radius: 50%;
 }
 
 header .logo a {
@@ -58,7 +60,6 @@ header .logo a {
 header .logo img {
   width: 70px;
   height: 70px;
-  border: 1px solid #bdc1c7;
   border-radius: 50%;
 }
 
