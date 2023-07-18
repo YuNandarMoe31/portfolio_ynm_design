@@ -48,8 +48,6 @@ header {
 header .logo {
   font-size: 18px;
   text-transform: uppercase;
-  background-color: #FFF7F7;
-  border: 1px solid #bdc1c7;
   border-radius: 50%;
 }
 
