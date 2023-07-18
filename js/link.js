@@ -1,19 +1,15 @@
 // header
 $(function() {
     $("#header").load("header.html");
-});
 
-// about
-$(function() {
     $("#about").load("about.html");
-});
 
-// education
-$(function() {
     $("#education").load("education.html");
+
+    $("#services").load("services.html");
+
+    // $("#experiences").load("experiences.html");
+
+    $("#contact").load("contact.html");
 });
 
-// services
-$(function() {
-    $("#services").load("services.html");
-});

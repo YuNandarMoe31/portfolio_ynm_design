@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "Give You Glory";
+  src: url(../font/GiveYouGlory-Regular.ttf);
+}
+
 body {
-  font-family: "Zen Maru Gothic", sans-serif;
+  font-family: "Open Sans, serif";
   background-color: #fff7f7;
 }
 
@@ -29,6 +34,10 @@ body {
   display: none;
 }
 
+a {
+  transition: all .2s linear;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -39,6 +48,11 @@ header {
 header .logo {
   font-size: 18px;
   text-transform: uppercase;
+  background-color: #FFF7F7;
+}
+
+header .logo a {
+  display: block;
 }
 
 header .logo img {
@@ -56,23 +70,29 @@ nav .menu-list {
 
 nav .menu-list li {
   margin-left: 2rem;
+  font-family: "Zen Maru Gothic", sans-serif;;
+}
+
+nav .menu-list li a:hover,
+.about-txt li a:hover {
+  color: #c28181;
 }
 
 .sec-title,
 .sec-title02 {
   display: flex;
-  /* justify-content: center; */
   position: relative;
   font-size: 2.2rem;
+  font-family: "Give You Glory";
   color: #003d5b;
   line-height: 1.2;
   margin-bottom: 15px;
 }
 
 .sec-txt {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #35373a;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .sec-subtitle {
@@ -125,6 +145,11 @@ nav .menu-list li {
   .sec-title,
   .sec-title02 {
     font-size: 30px;
+  }
+
+  header {
+    position: fixed;
+    z-index: 3;
   }
 
   /* hamburger menu */
@@ -247,4 +272,13 @@ nav .menu-list li {
   nav .menu-list li {
     margin-left: 0;
   }
+}
+
+/* copyright */
+.copyright-sec {
+  padding: 20px 0;
+  background-color: #ead2d2;
+  font-size: 16px;
+  color: #c28181;
+  text-align: center;
 }

@@ -27,12 +27,10 @@ toggle();
 //     e.preventDefault();
 //     var target = $($(this).attr('href'));
 //     if (target.length) {
-//         var scrollTo = target.offset().top;
+//         var scrollTo = tar္get.offset().top;
 //         $('body, html').animate({ scrollTop: scrollTo + 'px' }, 800);
 //     }
 // });
-
-
 function smoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -46,3 +44,32 @@ function smoothScroll() {
 };
 smoothScroll();
 
+// experiences slide
+$('.center').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    dots: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1230,
+        settings: {
+          arrows: false,
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          arrows: false,
+          centerMode: false,
+          centerPadding: '40px',
+          slidesToShow: 1,
+          dots: false
+        }
+      }
+    ]
+  });
