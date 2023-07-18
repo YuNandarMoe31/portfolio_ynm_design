@@ -27,7 +27,7 @@ toggle();
 //     e.preventDefault();
 //     var target = $($(this).attr('href'));
 //     if (target.length) {
-//         var scrollTo = target.offset().top;
+//         var scrollTo = tar္get.offset().top;
 //         $('body, html').animate({ scrollTop: scrollTo + 'px' }, 800);
 //     }
 // });
@@ -49,6 +49,8 @@ $('.center').slick({
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 3,
+    dots: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1230,
@@ -65,7 +67,8 @@ $('.center').slick({
           arrows: false,
           centerMode: false,
           centerPadding: '40px',
-          slidesToShow: 1
+          slidesToShow: 1,
+          dots: false
         }
       }
     ]
